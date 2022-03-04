@@ -14,7 +14,7 @@ namespace ConfArch.Data.Repositories
         public User GetByUsernameAndPassword(string username, string password)
         {
             var user = users.SingleOrDefault(u => u.Name == username &&
-                                                  u.Password == password.Sha256());
+                                                  u.Password == password);
             return user;
         }
 
